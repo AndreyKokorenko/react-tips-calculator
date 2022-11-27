@@ -1,7 +1,8 @@
 import { StylesConfig } from "react-select";
+import { IOption } from "../../types/types";
 
-export const styles: StylesConfig = {
-  container: (baseStyles) => ({
+export const styles: StylesConfig<IOption> = {
+  container: (baseStyles, state) => ({
     ...baseStyles,
     "@media (max-width: 480px)": {
       ...baseStyles,

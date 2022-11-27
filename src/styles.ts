@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import shape from "./assets/shape.png";
 
-const Container: any = styled.div`
+const Container = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
   height: 100vh;
-  background: left 0 #eaf2f2 url("./assets/shape.svg");
+  background: left top no-repeat url(${shape}), #eaf2f2;
 `;
 
 export { Container };

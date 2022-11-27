@@ -1,10 +1,16 @@
 import { StyledButton } from "./styles";
-import { IButton } from "../../types/types";
+import { ReactNode } from "react";
 
-export const Button = ({ disabled, type, children }: IButton) => {
+interface IButtonProps {
+  disabled: boolean;
+  type: "button" | "submit" | "reset";
+  children: ReactNode;
+}
+
+export const Button = (props : IButtonProps) => {
   return (
-    <StyledButton disabled={disabled} type={type}>
-      {children}
+    <StyledButton {...props}>
+      {props.children}
     </StyledButton>
   );
 };
